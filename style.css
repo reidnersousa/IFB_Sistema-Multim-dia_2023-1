@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+
+#quadrado {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    top: 0;
+    left: 0;
+}
+
+#cobrinha_2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%);  */
+    width: 50px;
+    height: 50px;
+    background-color: rgb(75, 22, 160);
+}
+
+
+.snake {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .segment {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+  .minhaDiv{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(185, 9, 9);
+    margin-right: 5px;
+    border-radius: 50%;
+    top:50%;
+  }
+
