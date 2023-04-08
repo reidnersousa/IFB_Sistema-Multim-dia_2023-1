@@ -1,10 +1,13 @@
-var cobrinha_2 = document.getElementById("cobrinha_2");
+var cobrinha_2 = document.getElementById("snake"); // azul 
+
+
+//var cobrinha_2 = document.getElementById("cobrinha_2"); // azul 
 var x_2 = 200;  // posição inicial 
 var y_2 = 200;  // posição inical 
 
 // segundo jogador move pelas as setinhas
 window.addEventListener("keydown", function (event) {
-    var tecla = event.keyCode;
+   
     switch (event.keyCode) {
 
         case 65: // A
@@ -52,29 +55,21 @@ window.addEventListener("keydown", function (event) {
             break;
     }
 
-    posicao_x = cobrinha.style.left = x + "px";
-    posicao_y = cobrinha.style.top = y + "px";
-    if (posicao_x == posicao_x_2 || posicao_y == posicao_y_2) {
-        alert("Game Over");
-        
+    cobrinha.style.left = x + "px";
+    cobrinha.style.top = y + "px";
+    var coordenadas_Cobrinha_1 = cobrinha.getBoundingClientRect();
+    var coordenadas_Cobrinha_2 = cobrinha_2.getBoundingClientRect();
+
+
+    // Verifica se há sobreposição entre as divs
+    if (coordenadas_Cobrinha_1.right > coordenadas_Cobrinha_2.left && coordenadas_Cobrinha_1.left < coordenadas_Cobrinha_2.right && coordenadas_Cobrinha_1.bottom > coordenadas_Cobrinha_2.top && coordenadas_Cobrinha_1.top < coordenadas_Cobrinha_2.bottom) {
+        console.log("As divs estão sobrepostas.");
+    } else {
+        console.log("As divs não estão sobrepostas.");
     }
+
 });
 
 
 
-// Cria um novo elemento div
-for (let i = 0; i < 2; i++) {
-    var div = document.createElement("div");
 
-    // Define um id para a div criada
-    div.id = "minhaDiv";
-
-    // Define o conteúdo da div criada
-    div.innerHTML = "Minha div criada com JavaScript!";
-
-    // Adiciona a nova div ao corpo da página
-    document.body.appendChild(div);
-
-}
-
-alert(posicao_x)
