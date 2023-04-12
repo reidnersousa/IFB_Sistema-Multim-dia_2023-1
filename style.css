@@ -23,26 +23,55 @@ body {
 }
 
 
+
+.container {
+    width: 600px;
+    height: 400px;
+    margin: 10px auto;
+    position: relative;
+    border: 5px solid #333;
+}
+
+
 .snake {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+.food {
+    width: 20px;
+    height: 20px;
+    background-color: red;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.cauda{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    
+}
+
+
+
+
+
+
+  .div1, .div2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
   }
   
-  .segment {
-    width: 30px;
-    height: 30px;
-    background-color: green;
-    margin-right: 5px;
-    border-radius: 50%;
+  .div1 {
+    top: 0;
+    left: 0;
   }
-  .minhaDiv{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(185, 9, 9);
-    margin-right: 5px;
-    border-radius: 50%;
-    top:50%;
+  
+  .div2 {
+    top: 50px;
+    left: 50px;
   }
-

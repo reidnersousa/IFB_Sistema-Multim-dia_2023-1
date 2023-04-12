@@ -1,11 +1,10 @@
-var cobrinha_2 = document.getElementById("snake"); // azul 
 
 
-//var cobrinha_2 = document.getElementById("cobrinha_2"); // azul 
+var cobrinha_2 = document.getElementById("cobrinha_2"); // azul 
 var x_2 = 200;  // posição inicial 
 var y_2 = 200;  // posição inical 
 
-// segundo jogador move pelas as setinhas
+// segundo jogador move pelas as AWSD
 window.addEventListener("keydown", function (event) {
    
     switch (event.keyCode) {
@@ -26,6 +25,16 @@ window.addEventListener("keydown", function (event) {
 
     posicao_x_2 = cobrinha_2.style.left = x_2 + "px";
     posicao_y_2 = cobrinha_2.style.top = y_2 + "px";
+    var coordenadas_Cobrinha_1 = cobrinha.getBoundingClientRect();
+    var coordenadas_Cobrinha_2 = cobrinha_2.getBoundingClientRect();
+
+
+    // Verifica se há sobreposição entre as divs
+    if (coordenadas_Cobrinha_1.right > coordenadas_Cobrinha_2.left && coordenadas_Cobrinha_1.left < coordenadas_Cobrinha_2.right && coordenadas_Cobrinha_1.bottom > coordenadas_Cobrinha_2.top && coordenadas_Cobrinha_1.top < coordenadas_Cobrinha_2.bottom) {
+        console.log("As divs estão sobrepostas.");
+    } else {
+        console.log("As divs não estão sobrepostas.");
+    }
 });
 
 
@@ -38,6 +47,7 @@ var cobrinha = document.getElementById("quadrado");
 var x = 100;
 var y = 100;
 
+/*  por enquanto vai fica assim 
 
 window.addEventListener("keydown", function (event) {
     switch (event.keyCode) {
@@ -57,19 +67,10 @@ window.addEventListener("keydown", function (event) {
 
     cobrinha.style.left = x + "px";
     cobrinha.style.top = y + "px";
-    var coordenadas_Cobrinha_1 = cobrinha.getBoundingClientRect();
-    var coordenadas_Cobrinha_2 = cobrinha_2.getBoundingClientRect();
-
-
-    // Verifica se há sobreposição entre as divs
-    if (coordenadas_Cobrinha_1.right > coordenadas_Cobrinha_2.left && coordenadas_Cobrinha_1.left < coordenadas_Cobrinha_2.right && coordenadas_Cobrinha_1.bottom > coordenadas_Cobrinha_2.top && coordenadas_Cobrinha_1.top < coordenadas_Cobrinha_2.bottom) {
-        console.log("As divs estão sobrepostas.");
-    } else {
-        console.log("As divs não estão sobrepostas.");
-    }
+    
 
 });
 
-
+*/
 
 
